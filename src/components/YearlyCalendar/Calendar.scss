@@ -1,0 +1,140 @@
+$deepteal: #004a52;
+$mediumScreenMedia: 'max-height: 800px';
+$largeScreenMedia: 'min-height: 800px';
+
+.calendar-container {
+  padding: 1em 0 1em 1em;
+  display: grid;
+  grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  grid-template-rows: 50% 50%;
+}
+
+.date {
+  padding-bottom: 0.5em;
+  &-container {
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 12px;
+    width: 25px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+  }
+}
+
+.padding-date {
+  width: 25px;
+  height: 21px;
+}
+
+.weekdays-container {
+  width: 175px;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-around;
+  background-color: $deepteal;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.month-container {
+  width: 175px;
+  margin: 0 1em 1em 0;
+}
+
+.weekdays-container div {
+  padding: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.month-header {
+  background-color: $deepteal;
+  color: #ffffff;
+  text-align: center;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.calendar-tooltip {
+  z-index: 10;
+  max-height: 150px;
+  min-width: 110px;
+  overflow: auto;
+  padding: 0.5em;
+  color: #000000;
+  background-color: rgba($color: #ffffff, $alpha: 1);
+  position: absolute;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #000000;
+
+  &-date {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  &-event {
+    &-list {
+      margin-left: -2em;
+    }
+    &-item {
+      margin: 0 0 0.5em 0;
+    }
+    &-item div {
+      position: relative;
+      left: -5px;
+    }
+  }
+}
+
+.calendar-title {
+  color: #004a52;
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 6px;
+}
+
+@media ($largeScreenMedia) {
+  .month-container {
+    width: 266px;
+  }
+
+  .weekdays-container {
+    width: 266px;
+  }
+
+  .padding-date {
+    width: 38px;
+  }
+
+  .date-container {
+    width: 38px;
+  }
+}
