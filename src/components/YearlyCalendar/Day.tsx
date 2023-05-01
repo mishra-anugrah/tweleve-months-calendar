@@ -26,6 +26,7 @@ export const Day = (props: IDayProps) => {
       day: "numeric",
     });
     setFullDate(dateString);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -41,13 +42,13 @@ export const Day = (props: IDayProps) => {
     boxShadow += `${eve.color} 0px -2px 0 0 inset`;
   } else if (day.events?.length <= 3) {
     let colorInd = 0;
-    day.events.map((item: any, index: number) => {
+    day.events.forEach((item: any, index: number) => {
       if (!item?.inset) {
         item.inset = (index + 1) * -2;
       }
     });
 
-    day.events.map((item: any, index: number) => {
+    day.events.forEach((item: any, index: number) => {
       item.color = item.color ? item.color : EVENT_COLORS[colorInd + 1];
       if (!item?.inset) {
         item.inset = (index + 1) * -2;
