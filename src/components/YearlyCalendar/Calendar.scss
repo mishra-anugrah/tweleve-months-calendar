@@ -4,9 +4,13 @@ $largeScreenMedia: 'min-height: 800px';
 
 .calendar-container {
   padding: 1em 0 1em 1em;
-  display: grid;
-  grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
-  grid-template-rows: 50% 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  // display: grid;
+  // grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  // grid-template-rows: 50% 50%;
+
 }
 
 .date {
@@ -35,7 +39,7 @@ $largeScreenMedia: 'min-height: 800px';
 }
 
 .weekdays-container {
-  width: 175px;
+  // width: 175px;
   display: flex;
   color: #ffffff;
   justify-content: space-around;
@@ -46,8 +50,8 @@ $largeScreenMedia: 'min-height: 800px';
 }
 
 .month-container {
-  width: 175px;
   margin: 0 1em 1em 0;
+  flex-basis: 15%;
 }
 
 .weekdays-container div {
