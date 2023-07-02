@@ -16,10 +16,11 @@ $largeScreenMedia: 'min-height: 800px';
 .date {
   padding-bottom: 0.5em;
   &-container {
+    flex-basis: 14.28%;
     position: relative;
     margin-bottom: 5px;
     font-size: 12px;
-    width: 25px;
+    // width: 25px;
     height: 21px;
     display: flex;
     justify-content: center;
@@ -34,8 +35,9 @@ $largeScreenMedia: 'min-height: 800px';
 }
 
 .padding-date {
-  width: 25px;
+  flex-basis: 14.28%;
   height: 21px;
+  // width: 25px;
 }
 
 .weekdays-container {
